@@ -1,0 +1,32 @@
+body {
+  width: 30%;
+}
+
+h1 span {
+  color: lightgreen;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: green;
+  border: none;
+  padding: 5px;
+  font-size: 30px;
+  color: white;
+  border-radius: 5px;
+}
+
+div p {
+  padding: 10px;
+  color: lightgreen;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+}
