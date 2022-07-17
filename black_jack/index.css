@@ -1,0 +1,19 @@
+body {
+  background-color: #698;
+  text-align: center;
+}
+
+button {
+  padding: 1.5vw;
+  background-color: #985;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #258;
+}
+
+p {
+  font-size: 2vw;
+}
