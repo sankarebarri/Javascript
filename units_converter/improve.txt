@@ -1,0 +1,2 @@
+-- Refactor the codes
+-- Option to allow for just a choosen conversion
