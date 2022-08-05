@@ -1,0 +1,17 @@
+body {
+  background-color: #856;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+li {
+  list-style: none;
+  font-size: 1.5rem;
+  background-color: #986;
+  padding-top: 20px;
+}
+
+span {
+  background-color: #456;
+}

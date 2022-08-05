@@ -1,0 +1,12 @@
+####### 03-08-2022 #######
+DONE New question onclick
+DONE change background color based on correct click
+DONE Add score board, +10 for each correct question
+DONE Remove seen questions from questions
+DONE Go to finished page after all questions
+####### 04-08-2022 #######
+
+####### 04-08-2022 #######
+DONE Progress Bar
+DONE Page to save score and name of your last game
+-- Page for the top 5 scores with names

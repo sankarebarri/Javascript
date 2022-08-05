@@ -1,0 +1,13 @@
+button {
+  margin-bottom: 20px;
+  height: 3.4rem;
+  padding: 15px;
+  background: lightgreen;
+  border: none;
+  border-radius: 2px;
+}
+
+input {
+  height: 2.5rem;
+  padding: 5px;
+}
