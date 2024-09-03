@@ -28,3 +28,39 @@ const myHonda = {
 // console.log(myHonda);
 // console.log(myHonda.engine.cylinders);
 // console.log(myHonda["engine"]["cylinders"]);
+
+/* USING A CONSTRUCTOR FUNCTION */
+function Car(make, model, year) {
+  (this.make = make), (this.model = model), (this.year = year);
+}
+
+// create an object og the Car
+const myCar = new Car("Toyota", "RAV4", 2008);
+// console.log(myCar.make);
+// console.log(myCar.model);
+// console.log(myCar.year);
+
+// an object can have a property that is itself a property of another object
+function Person(name, sex, age) {
+  (this.name = name), (this.sex = sex), (this.age = age);
+}
+
+const rand = new Person("Rand", "M", 36);
+
+// rewrite the Car Object to contains an owner's property
+function Car(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
+}
+
+const car1 = new Car("Mercedez", "B190", 1993, rand);
+// console.log(car1.owner.name);
+// console.log(car1.owner.sex);
+// console.log(car1.owner.age);
+
+// ADD A PROPERTY TO A PREVIOUSLY DEFINED OBJECT
+car1.color = "black";
+// console.log(car1); // this will only affect the car1 and not the whole Car
+// console.log(Car);
