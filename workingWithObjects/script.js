@@ -84,3 +84,37 @@ animal1.displayType(); // will logs out invertbrates
 const fish = Object.create(Animal);
 fish.type = "Fishes";
 fish.displayType(); // will logs out Fishes
+
+/* OBJECTS AND PROPERTIES */
+const myCar2 = {
+  make: "Ford",
+  type: "Mustang",
+  year: 1993,
+}; // NB: all keys are converted to strings
+
+// accessing properties
+// dot notation
+console.log(myCar2.make);
+//bracket notation
+console.log(myCar2["make"]);
+
+// An object property name can be any JavaScript string or symbol,
+// including an empty string.
+const myObj = {};
+const str = "myString";
+const random = Math.random();
+const anotherObj = {};
+
+// create properties on myObj
+myObj.type = "Dot syntax for a key named type";
+// myObj["type"] = "bracket syntax for a key named type";
+myObj["date created"] = "This key has a space";
+myObj[str] = "This key is an already created variable called myString";
+myObj[random] = "A random number is the key here";
+myObj[anotherObj] = "This key is object anotherObj";
+myObj[""] = "This key is an empty string";
+
+console.log(myObj);
+console.log(myObj.str); // will return undefined because it can only work with bracket notation
+console.log(myObj[str]);
+console.log(myObj.myString);
