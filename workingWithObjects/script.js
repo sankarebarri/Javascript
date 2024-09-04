@@ -64,3 +64,23 @@ const car1 = new Car("Mercedez", "B190", 1993, rand);
 car1.color = "black";
 // console.log(car1); // this will only affect the car1 and not the whole Car
 // console.log(Car);
+
+/* USING THE Object.create() method */
+
+// animal properties and method encapsulation
+const Animal = {
+  type: "Invertebrates", // default value of the properties
+  displayType() {
+    // method which will display type of animal
+    console.log(this.type);
+  },
+};
+
+// create new animal type called animal1
+const animal1 = Object.create(Animal);
+animal1.displayType(); // will logs out invertbrates
+
+// create new animal called fish
+const fish = Object.create(Animal);
+fish.type = "Fishes";
+fish.displayType(); // will logs out Fishes
