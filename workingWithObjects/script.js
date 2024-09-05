@@ -118,3 +118,31 @@ console.log(myObj);
 console.log(myObj.str); // will return undefined because it can only work with bracket notation
 console.log(myObj[str]);
 console.log(myObj.myString);
+
+// enumerating properties
+function showProps(obj, objName) {
+  let result = "";
+  for (const i in obj) {
+    if (Object.hasOwn(obj, i)) {
+      result += `${objName}.${i} = ${obj[i]}\n`;
+    }
+  }
+  console.log(result);
+}
+
+showProps(myCar, "myCar");
+// will produce
+// myCar.make = Ford
+// myCar.model = Mustang
+// myCar.year = 1969
+
+// deleting properties
+// You can remove a non-inherited property using the delete operator.
+const myObj1 = new Object();
+myObj1.a = 5;
+myObj1.b = 12;
+
+console.log("a" in myObj1);
+delete myObj1.a;
+
+console.log("a" in myObj1);
