@@ -146,3 +146,15 @@ console.log("a" in myObj1);
 delete myObj1.a;
 
 console.log("a" in myObj1);
+
+/* INHERITANCE */
+// All objects in JavaScript inherit from at least one other object.
+// The object being inherited from is known as the prototype,
+// and the inherited properties can be found in the prototype
+// object of the constructor
+
+console.log(car1.color);
+Car.prototype.color = "red";
+console.log(car1.color);
+
+// END
