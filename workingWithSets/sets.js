@@ -41,3 +41,50 @@ console.log(mySet1.has(Math.sqrt(25))); // true
 console.log(mySet1.has("Some Text".toLowerCase())); // true
 
 console.log(mySet1.size); // 5
+
+// Iterating Sets
+console.log("Iterating Sets");
+for (const item of mySet1) {
+  console.log(item);
+}
+
+console.log("Iterating Keys");
+for (const item of mySet1.keys()) {
+  console.log(item);
+}
+
+console.log("Iterating Values");
+for (const item of mySet1.values()) {
+  console.log(item);
+}
+
+console.log("Iterating Key and value by entries");
+for (const [key, value] of mySet1.entries()) {
+  console.log(key, value);
+}
+
+//Converting Set object to an array object, with Array.from()
+console.log("//Converting Set object to an array object, with Array.from()");
+const myArr = Array.from(mySet1);
+console.log(myArr);
+
+// the following will also work if run in an HTML document
+// mySet1.add(document.body);
+// mySet1.has(document.querySelector("body"));
+
+// Converting between Set and Array
+console.log("mySet2");
+const mySet2 = new Set([1, 2, 3, 4]);
+const myArr2 = [...mySet2];
+console.log(myArr2);
+
+console.log("filtering -- intersection");
+const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
+console.log(intersection);
+
+console.log("filtering -- difference");
+const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
+console.log(difference);
+
+// iterate with forEach
+mySet2.forEach((value) => console.log(value));
