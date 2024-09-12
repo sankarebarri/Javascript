@@ -6,9 +6,17 @@ const squareRoot = numbers.map((number) => {
 });
 console.log(squareRoot); // [ undefined, undefined, undefined, undefined ]
 
-const squareRoot1 = numbers.map((number) => {
-  return Math.sqrt(number);
-});
+const squareRoot1 = numbers.map(
+  (number) => number * 6
+  //   return Math.sqrt(number);
+);
+
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
 console.log(squareRoot1); // [ 2, 3, 4, 5 ]
 const myNewArr = numbers.map(Math.sqrt);
 console.log(myNewArr); // [ 2, 3, 4, 5 ]
