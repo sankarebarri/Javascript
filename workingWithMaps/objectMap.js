@@ -70,3 +70,67 @@ for (const [k, v] of myMap1.entries()) {
 myMap1.forEach((value, key) => {
   console.log(`${key} = ${value}`);
 });
+
+/* RELATION WITH ARRAYS */
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
+
+// Use the regular Map constructor to transform a 2D key-value Array into a map
+const myMap2 = new Map(kvArray);
+console.log(myMap2);
+console.log(myMap2.get("key1"));
+
+// Use Array.from() to transform a map into a 2D key-value Array
+const myArr = Array.from(myMap2); // Will show you exactly the same Array as kvArray
+console.log(myArr); // [ [ 'key1', 'value1' ], [ 'key2', 'value2' ] ]
+
+// using the spread syntax
+console.log([...myMap2]); // [ [ 'key1', 'value1' ], [ 'key2', 'value2' ] ]
+
+// Or use the keys() or values() iterators, and convert them to an array
+console.log(Array.from(myMap2.keys())); // [ 'key1', 'key2' ]
+console.log(myMap2.values());
+
+// cloning and merging maps
+const original = new Map([[1, "one"]]);
+const clone = new Map(original);
+
+console.log(clone.get(1));
+console.log(original === clone); // false
+console.log(clone["1"]); // undefined
+
+const first = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+
+const second = new Map([
+  [1, "uno"],
+  [2, "dos"],
+]);
+
+// Merge two maps. The last repeated key wins.
+// Spread syntax essentially converts a Map to an Array
+const merged = new Map([...first, ...second]);
+console.log(merged);
+console.log(merged.get(1)); // { 1 => 'uno', 2 => 'dos', 3 => 'three' }
+
+// Maps can be merged with Arrays, too
+
+const ffirst = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
+]);
+
+const ssecond = new Map([
+  [1, "uno"],
+  [2, "dos"],
+]);
+
+// Merge maps with an array. The last repeated key wins.
+const mmerged = [...ffirst, ...ssecond, [1, "eins"]];
+console.log(mmerged);
